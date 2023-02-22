@@ -17,10 +17,11 @@ public class tileManager {
 
     public tileManager(GamePan gp) {
         this.gp = gp;
-        tile = new tile[10];
-        mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow];
+        tile = new tile[3];
+        mapTileNum = new int[gp.maxWorldCol] [gp.maxWorldRow];
+
         getTileImage();
-        loadMap("/Map/World1.txt");
+        loadMap("/Map/testWorld.txt");
     }
 
     public void getTileImage() {
