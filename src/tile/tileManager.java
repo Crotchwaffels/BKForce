@@ -21,11 +21,10 @@ public class tileManager {
         mapTileNum = new int[gp.maxWorldCol] [gp.maxWorldRow];
 
         getTileImage();
-        loadMap("/Map/testWorld.txt");
+        loadMap("/Worlds/World1.txt");
     }
 
     public void getTileImage() {
-
         try {
 
             tile[0] = new tile();
@@ -42,10 +41,10 @@ public class tileManager {
         }
     }
 
-    public void loadMap() {
+    public void loadMap(String filePath) {
 
         try {
-            InputStream is = getClass().getResourceAsStream("/Map/Map1.txt");
+            InputStream is = getClass().getResourceAsStream("/Worlds/World1.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
             int col = 0;
@@ -77,9 +76,9 @@ public class tileManager {
             int col = 0;
             int row = 0;
             int x = 0;
-            int y = 0;
+            int y = 15;
 
-            while (col < gp.maxScreenCol && row < gp.maxScreenRow) {
+            while (col < gp.maxWorldCol && row < gp.maxWorldRow) {
 
                 int tileNum = mapTileNum[col][row];
 
@@ -87,7 +86,7 @@ public class tileManager {
                 col++;
                 x += gp.pixSize;
 
-                if (col == gp.maxScreenCol) {
+                if (col == gp.maxWorldCol) {
                     col = 0;
                     x = 0;
                     row++;
