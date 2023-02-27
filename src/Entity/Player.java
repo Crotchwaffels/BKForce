@@ -20,8 +20,8 @@ public class Player extends Entity{
         this.gp = gp;
         this.keyH = keyH;
 
-        screenX = gp.screenWidth/2 - (gp.pixSize/2);
-        screenY = gp.screenHeight/2 - (gp.pixSize/2);
+        screenX = gp.screenWidth - (gp.pixSize/2) - (gp.pixSize/2) - (gp.pixSize/2) - (gp.pixSize/2);
+        screenY = gp.screenHeight - (gp.pixSize/2) - (gp.pixSize/2) - (gp.pixSize/2) - (gp.pixSize/2);
 
         setDefaultValues();
         getPlayerImage();
